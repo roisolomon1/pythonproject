@@ -54,6 +54,7 @@ class Test_General():
         expect(element2).to_contain_text("shirt",ignore_case=True)
 
         page_after_search = page_after_search_item(page)
+
         size = "M"
         page_after_search.click_on_item_and_pick_size(size)
 
