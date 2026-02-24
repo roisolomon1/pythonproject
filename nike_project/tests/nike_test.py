@@ -10,7 +10,7 @@ from nike_project.pages.page_after_search import page_after_search_item
     # ⚡ Interesting test
     # =====================
 
-    # statement to show the more interesting tests , each show a different concept at least a bit different
+    # statements to show the more interesting tests , each show a different concept at least a bit different
 
 
 class Test_General():
