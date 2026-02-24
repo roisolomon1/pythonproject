@@ -209,7 +209,7 @@ class Test_Menu_Buttons():
         page = setup_playwright
         page.goto(URL)
         home_page = HomePage(page)
-        category = "Kids"
+        category = "New"
         home_page.all_buttons_click(category)
 
         assert category.lower() in page.url.lower()
@@ -238,21 +238,6 @@ class Test_Menu_Buttons():
         home_page.sport_button_click()
 
         expect(page).to_have_url("https://www.nike.com/il/lockerroom")
-
-    # def test_kids_button_click(self,setup_playwright):
-    #     page = setup_playwright
-    #     page.goto(URL)
-    #     home_page = HomePage(page)
-    #     home_page.kids_button_click()
-    #     expect(page).to_have_url("https://www.nike.com/il/kids")
-
-    # def test_new_button_click(self,setup_playwright):
-    #     page = setup_playwright
-    #     page.goto(URL)
-    #     home_page = HomePage(page)
-    #     home_page.new_button_click()
-    #     expect(page).to_have_url("https://www.nike.com/il/w/new-3n82y")
-
 
 
 
