@@ -91,8 +91,8 @@ class Test_General():
         home_page = HomePage(page)
         element1, element2 = home_page.search_item("shoes")
 
-        expect(element1).to_contain_text("shoes", ignore_case=True)
-        expect(element2).to_contain_text("shoes", ignore_case=True)
+        expect(element1).to_contain_text("shoe", ignore_case=True)
+        expect(element2).to_contain_text("shoe", ignore_case=True)
 
         page_after_search = page_after_search_item(page)
         sort_category = "Price: High-Low"
@@ -125,8 +125,8 @@ class Test_General():
         home_page = HomePage(page)
         element1, element2 = home_page.search_item("shoes")
 
-        expect(element1).to_contain_text("shoes", ignore_case=True)
-        expect(element2).to_contain_text("shoes", ignore_case=True)
+        expect(element1).to_contain_text("shoe", ignore_case=True)
+        expect(element2).to_contain_text("shoe", ignore_case=True)
 
         page_after_search = page_after_search_item(page)
         page_after_search.choose_gender_after_search("Men")
@@ -145,8 +145,8 @@ class Test_Nike_Right_Buttons():
         home_page = HomePage(page)
         element1,element2 = home_page.search_item("shoes")
 
-        expect(element1).to_contain_text("shoes",ignore_case=True)
-        expect(element2).to_contain_text("shoes",ignore_case=True)
+        expect(element1).to_contain_text("shoe",ignore_case=True)
+        expect(element2).to_contain_text("shoe",ignore_case=True)
 
     def test_favourites_button(self,setup_playwright):
         page = setup_playwright
