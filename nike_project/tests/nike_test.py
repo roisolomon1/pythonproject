@@ -49,7 +49,6 @@ class Test_General():
         page.goto(URL)
         home_page = HomePage(page)
         element1,element2 = home_page.search_item("shirt")
-
         expect(element1).to_contain_text("shirt",ignore_case=True)
         expect(element2).to_contain_text("shirt",ignore_case=True)
 
@@ -58,7 +57,6 @@ class Test_General():
         page_after_search.click_on_item_and_pick_size(size)
 
         # the page is creating a new element after select and not changing attribute of the old one
-
         new_element_for_size = page.locator('[data-testid="pdp-grid-selector-item-selected"]').locator(f'[for="grid-selector-input-{size}"]')
         expect(new_element_for_size).to_be_visible()
 
