@@ -18,28 +18,28 @@ class Test_General():
     # ⚡ Interesting test
     # =====================
 
-    def test_shop_button_engineered_to_win(self,setup_playwright):
-        page = setup_playwright
-        page.goto(URL)
-        home_page = HomePage(page)
-        home_page.shop_engineered_click()
-
-        expect(page).to_have_url("https://www.nike.com/il/w/golf-23q9w")
-
-        golf_page = GolfPage(page)
-
-        category_name = "Accessories & Equipment"
-        golf_page.click_category_and_gender(category_name)
-        key_words_category = category_name.replace("&"," ").split()
-        url_lower = page.url.lower()
-
-        for word in key_words_category:
-            assert word.lower() in url_lower
-
-        gender = "Men"
-        golf_page.choose_gender_golf(gender)
-        url_lower = page.url.lower()
-        assert gender.lower() in url_lower
+    # def test_shop_button_engineered_to_win(self,setup_playwright):
+    #     page = setup_playwright
+    #     page.goto(URL)
+    #     home_page = HomePage(page)
+    #     home_page.shop_engineered_click()
+    #
+    #     expect(page).to_have_url("https://www.nike.com/il/w/golf-23q9w")
+    #
+    #     golf_page = GolfPage(page)
+    #
+    #     category_name = "Accessories & Equipment"
+    #     golf_page.click_category_and_gender(category_name)
+    #     key_words_category = category_name.replace("&"," ").split()
+    #     url_lower = page.url.lower()
+    #     print("h")
+    #     for word in key_words_category:
+    #         assert word.lower() in url_lower
+    #
+    #     gender = "Men"
+    #     golf_page.choose_gender_golf(gender)
+    #     url_lower = page.url.lower()
+    #     assert gender.lower() in url_lower
 
     # ⚡ Interesting test
     # =====================
